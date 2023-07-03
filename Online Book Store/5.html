@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+	<TITLE>REGISTRATION FORM</TITLE>
+	<script>
+
+function validate()
+{
+var n=document.getElementById("name");
+var m=document.getElementById("mobile");
+var e=document.getElementById("email");
+
+var patt_name=/(^[A-Za-z]+\s[A-Za-z]+$)/;
+var patt_mobile=/^\+[7-9][0-9]{11}/;
+var patt_email=/^([A-za-z0-9\.-]+)@([A-za-z0-9-]+).([a-z]{2,3})$/;
+if(n.value=="")
+ {
+alert("Name is required[It should start with a Capital letter]");
+n.style.border="3px solid BLUE";
+return false;
+ }
+  else 
+  {
+	if(m.value=="")
+	{
+	alert("Mobile number is required to send SMS");
+	m.style.border="3px solid BLUE";
+	return false;
+	}
+	  else
+	  {
+		if(e.value=="")
+		{
+		alert("email is required");
+		e.style.border="3px solid BLUE";
+		return false;
+	  }
+		 else 
+		      {
+		
+				if(patt_name.test(n.value))
+				{
+					if(patt_mobile.test(m.value))
+					{
+						if(patt_email.test(e.value))
+						{
+						alert("Data Submitted");
+						return true;
+						}
+						else{
+							alert("Email is not correct");
+							e.style.border="3px solid BLUE";
+							return false;
+							}
+					
+					}
+					else{
+					alert("Mobile is not correct");
+					m.style.border="3px solid BLUE";
+					return false;
+					}
+				}
+				else{
+					alert("Name is not correct[It should start with a Capital letter]");
+					n.style.border="3px solid BLUE";
+					return false;
+					}
+			}
+	}
+}
+
+
+}
+
+
+</script>
+</HEAD>
+<BODY background ="formimage.JPG">
+	<H1 ALIGN="CENTER"><B><U><FONT FACE="Castellar" size="7" STYLE="BACKGROUND-COLOR:YELLOW">BOOKS TRESSURE</FONT></U></B></H1>
+	<H3 ALIGN="CENTER"><B><U><FONT FACE="Castellar" size="6" STYLE="BACKGROUND-COLOR:RED">****NEW USER REGISTRATION FORM****</FONT></U></H3>
+		<H3 ALIGN="CENTER"><FONT Color=RED>*</FONT>  Indicates Compulsory</H3>
+	
+	<FORM  name="fname" onsubmit="return validate()" action="mailto:deshmukhog@rknec.edu?subject=MyData" method="post" enctype="text/plain">
+			<fieldset>
+				<LEGEND><B><U><FONT Color=WHITE STYLE="BACKGROUND-COLOR:ORANGE">PERSONAL  INFORMATION</FONT></U></B></LEGEND>
+ Name<FONT Color=RED>*</FONT> : <INPUT TYPE="TEXT" name="fname" id="name"
+SIZE="15" MAXLENGTH="25"><BR><BR>
+*Name must start with a capital letter.<BR><br>
+E-mail<FONT Color=RED>*</FONT> : <INPUT TYPE="TEXT"  name="email" id="email"
+
+SIZE="25" MAXLENGTH="25"><BR><BR><BR>
+CONTACT NUMBER<FONT Color=RED>*</FONT> : <INPUT TYPE="TEXT" name="mobile" id="mobile"
+
+SIZE="15" MAXLENGTH="14"><BR><BR>
+<b>*Number must start with +91 and then 10 digit number in this form [+9198xxxxxxxx].</b>
+<BR>
+<br>
+Gender<FONT Color=RED>*</FONT> :
+
+
+MALE:<INPUT TYPE= "RADIO" Name="country"
+>&nbsp;&nbsp;
+
+FEMALE:<INPUT TYPE="RADIO" Name="country1"><BR>
+</fieldset>
+<br>
+<INPUT TYPE="button" VALUE="REGISTER" > <BR><BR>
+<BR>
+<U><FONT Color=BLUE STYLE="BACKGROUND-COLOR:WHITE">ONCE REGISTERED YOU CAN FILL THE FOLLOWING DETAILS AND PLACE YOUR ORDER :</FONT></U>
+<BR>
+<BR>
+<fieldset>
+	<LEGEND><B><U><FONT Color=WHITE STYLE="BACKGROUND-COLOR:ORANGE">BOOK  ORDER  INFORMATION</FONT></U></B></LEGEND>
+	<BR>
+TYPE OF BOOKS YOU ORDERED :
+<BR>
+<BR>
+
+MYTHOLOGY:<INPUT TYPE="CheckBox" Name="country2"
+CHECKED><BR>
+
+ENGLISH : <INPUT TYPE="CheckBox" Name="country3"><BR>
+
+DICTIONARIES:<INPUT TYPE="CheckBox" Name="country4"><BR>
+MARATHI :<INPUT TYPE="CheckBox" Name="country5"><BR>
+
+
+
+
+Please attach your srceenshot of SMS you received from BOOKS TRESSURE on your contact number here 
+
+
+<INPUT TYPE="File" name="myFile" size="30"><BR><BR>
+</fieldset>
+<br>
+Click below to Submit the form to place the order:<BR><br>
+
+
+<INPUT TYPE="submit" VALUE="Submit " > &nbsp;&nbsp; 
+
+<INPUT TYPE="RESET" VALUE="Reset">
+
+
+
+
+
+		
+	</FORM>
+</BODY>
+</HTML>

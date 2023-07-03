@@ -1,0 +1,112 @@
+<html>
+<head>
+	<title>CURRENCY CONVERTER</title>
+<style>
+input[type="button"]{
+border-radius:10px;
+background-color:orange;
+color:black;
+border-color:black;
+width:100%;
+}
+
+input[type="button"]:hover{
+
+background-color:green;
+
+
+}
+</style>
+
+<script>
+function clr(){
+document.getElementById("display").value="";
+}
+function data(val){
+document.getElementById("display").value+=val;
+}
+function calculate1(){
+var x=document.getElementById("display1").value; 
+document.getElementById("display2").value=x*0.014;
+}
+
+function calculate2(){
+var x=document.getElementById("display1").value; 
+document.getElementById("display3").value=x*0.011;
+}
+
+function calculate3(){
+var x=document.getElementById("display1").value; 
+document.getElementById("display4").value=x*0.017;
+}
+
+function calculate4(){
+var x=document.getElementById("display1").value; 
+document.getElementById("display5").value=x*1.47;
+}
+
+function calculate5(){
+var x=document.getElementById("display1").value; 
+document.getElementById("display6").value=x*0.051;
+}
+
+function calculate6(){
+var x=document.getElementById("display1").value; 
+document.getElementById("display7").value=x*0.42;
+}
+</script>
+
+
+
+</head>
+
+<body  background ="formimage.JPG">
+	<H1 ALIGN="CENTER"><B><U><FONT FACE="Castellar" size="7" STYLE="BACKGROUND-COLOR:YELLOW">BOOKS TRESSURE</FONT></U></B></H1>
+<center>
+<H3 ALIGN="CENTER"><B><U><FONT FACE="Castellar" size="6" STYLE="BACKGROUND-COLOR:RED">****CURRENCY CONVERTER****</FONT></U></H3>
+	<br>
+<FONT Color=RED>*</FONT> <b><i>Enter amount in Indian rupee and convert it.</i></b>
+<br>
+<center>
+<table border="40" width="50" height="40">
+<tr>
+<td> <IMG SRC="rupeesymbol.JPG" WIDTH="32" HEGHT="45" HSPACE="5"></IMG></td>
+<td><input type="text" id="display1" placeholder="value..." ></td>
+</tr>
+<br><br>
+
+<tr>
+<td><input type="button" value="&#36" onclick="calculate1('+')"></td>
+<td><input type="text" id="display2" placeholder="Dollar"  disabled></td>
+</tr>
+
+<tr>
+<td><input type="button" value="&#163" onclick="calculate2('-')"></td>
+<td><input type="text" id="display3" placeholder="Euro" disabled></td>
+</tr>
+
+<tr>
+<td><input type="button" value="&#8364;" onclick="calculate3('*')"></td>
+<td><input type="text" id="display4" placeholder="Australian Euro" disabled></td>
+</tr>
+
+<tr>
+<td><input type="button" value="&#165;" onclick="calculate4('/')"></td>
+<td><input type="text" id="display5" placeholder="Yen" disabled></td>
+</tr>
+
+<tr>
+<td><input type="button" value="&#65020;" onclick="calculate5('/')"></td>
+<td><input type="text" id="display6" placeholder="Saudi Currency" disabled></td>
+</tr>
+ 
+<tr>
+<td><input type="button" value="&#3647;" onclick="calculate6('/')"></td>
+<td><input type="text" id="display7" placeholder="Thailand Currency" disabled></td>
+</tr>
+
+
+</table>
+</center>
+</body>
+</html>

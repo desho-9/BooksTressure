@@ -1,0 +1,92 @@
+<html>
+<head>
+	<TITLE>CALCULATOR</TITLE>
+<style>
+input[type="button"]{
+border-radius:10px;
+background-color:orange;
+color:black;
+border-color:black;
+width:100%;
+
+}
+
+input[type="button"]:hover{
+
+background-color:green;
+
+
+}
+</style>
+
+<script>
+function clr(){
+document.getElementById("display").value="";
+}
+function data(val){
+document.getElementById("display").value+=val;
+}
+function calculate(){
+var x=document.getElementById("display").value; 
+document.getElementById("display").value=eval(x);
+}
+</script>
+
+
+
+</head>
+
+<body background ="formimage.JPG">
+	<H1 ALIGN="CENTER"><B><U><FONT FACE="Castellar" size="7" STYLE="BACKGROUND-COLOR:YELLOW">BOOKS TRESSURE</FONT></U></B></H1>
+<center>
+<H3 ALIGN="CENTER"><B><U><FONT FACE="Castellar" size="6" STYLE="BACKGROUND-COLOR:RED">****CALCULATOR****</FONT></U></H3>
+	<BR>
+ <FONT Color=RED>*</FONT><b><i>  For discount on special books use % in calculator on total amount.</i></b><BR><br><br>
+<table BORDER="40" BACKGROUND="TEXTURE.JPG">
+<tr>
+
+<td colspan="5"><input type="text" id="display" placeholder="0" ></td>
+</tr>
+
+<tr>
+<td><input type="button" value="+" onclick="data('+')"></td>
+<td><input type="button" value="1" onclick="data('1')"></td> 
+<td><input type="button" value="2" onclick="data('2')"></td>
+<td><input type="button" value="3" onclick="data('3')"></td>
+<td><input type="button" value="C" onclick="clr()" style="padding-left:20px;padding-right:20px"></td>
+
+</tr>
+
+<tr>
+<td><input type="button" value="-" onclick="data('-')"></td>
+<td><input type="button" value="4" onclick="data('4')"></td>
+<td><input type="button" value="5" onclick="data('5')"></td>
+<td><input type="button" value="6" onclick="data('6')"></td>
+<td><input type="button" value="Cc" onclick="clr()" style="padding-left:20px;padding-right:20px"></td>
+</tr>
+
+<tr>
+<td><input type="button" value="*" onclick="data('*')"></td>
+<td><input type="button" value="7" onclick="data('7')"></td>
+<td><input type="button" value="8" onclick="data('8')"></td>
+<td><input type="button" value="9" onclick="data('9')"></td>
+<td><input type="button" value="%" onclick="data('%')"></td>
+</tr>
+
+<tr>
+<td><input type="button" value="/" onclick="data('/')"></td>
+<td><input type="button" value="." onclick="data('.')"></td>
+<td><input type="button" value="0" onclick="data('0')"></td>
+<td><input type="button" value=".00" onclick="data('.00')"></td>
+<td><input type="button" value="=" onclick="calculate()"></td>
+</tr>
+
+
+
+</table>
+</center>
+
+
+
+</body>
+</html>

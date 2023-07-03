@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+	<TITLE>LOGIN</TITLE>
+	<script>
+
+function validate()
+{
+var n=document.getElementById("ID");
+var patt_name=/^[A-Z]+[0-9]+$/;
+       if(n.value=="")
+          {
+             alert("ID MUST BE FILLED");
+             n.style.border="2px solid BLUE";
+             return false;
+           }
+          else
+               {
+		
+				if(patt_name.test(n.value))
+				{
+					alert("Data Submitted");
+						return true;
+					}
+						else
+						{
+					    alert("ID is not correct");
+					    n.style.border="2px solid BLUE";
+					     return false;
+					     }
+			   }
+}
+		 
+
+</script>
+</HEAD>
+<BODY background ="formimage.JPG">
+	<H1 ALIGN="CENTER"><B><U><FONT FACE="Castellar" size="7" STYLE="BACKGROUND-COLOR:YELLOW">BOOKS TRESSURE</FONT></U></B></H1>
+	<H3 ALIGN="CENTER"><B><U><FONT FACE="Castellar" size="6" STYLE="BACKGROUND-COLOR:RED">****USER LOGIN****</FONT></U></H3>
+		<hr align="CENTER">
+	<H1 ALIGN="CENTER" ><FONT size="7" STYLE="BACKGROUND-COLOR:WHITE">	!!!!  WELCOME BACK !!!!</FONT></H1>
+
+		<FORM  name="fname" onsubmit="return validate()">
+			<fieldset align="CENTER" WIDTH="150">
+				<LEGEND><B><U><FONT Color=blue STYLE="BACKGROUND-COLOR:ORANGE">LOGIN INFORMATION</FONT></U></B></LEGEND>
+				<BR>
+			<FONT  STYLE="BACKGROUND-COLOR:ORANGE">	ENTER THE LOGIN CREDENTIALS ::</FONT>
+				<BR>
+				<BR>
+ <U><B><strong>Customer ID: </strong></B></U>&nbsp;&nbsp;<INPUT TYPE="TEXT" name="fname" id="ID" SIZE="15" MAXLENGTH="8"><BR><BR>
+ <FONT Color=RED size=4>*</FONT><FONT Color=BLUE STYLE="BACKGROUND-COLOR:WHITE"><U><B>[ID-(CUSTIDxx),last two are digits]</B></U></FONT><BR><br>
+  <U><B><strong>Password: </strong></B></U>&nbsp;&nbsp;<INPUT TYPE="PASSWORD" NAME="PWord" value="" SIZE="15" MAXLENGTH="25"><BR><BR><BR>
+
+
+ <INPUT TYPE="submit" VALUE="Submit " >&nbsp;&nbsp;
+ <INPUT TYPE="button" VALUE="FORGOT PASSWORD" > 
+
+
+
+</fieldset>
+</FORM>
+</BODY>
+</HTML>
