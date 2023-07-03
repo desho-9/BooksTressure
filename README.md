@@ -1,5 +1,5 @@
 # BooksTressure
-## This website was built by me in my 1st semester as a project of a sbject named Computer Workshop.
+## This website was built by me in my 1st semester as a project of a subject named Computer Workshop.
 ### HTML,CSS,some Javascript is also used.
 ### It is working locally and I will include other HTML files in index.html soon to host on GitHub.
 It is a online book store website includes
